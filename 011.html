@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/01.css">
+    <script type="text/javascript" src="jquery-3.3.1.min.js">
+    </script>
+</head>
+
+<body>
+    <div>
+        <img id="image01" src="01.jpg" alt="爱心">
+        <button>点这里</button>
+    </div>
+    <p id="sid"></p>
+    <p id="sid2"></p>
+    <script type="text/javascript">   
+        $(document).ready(function () {
+            $("p").click(function () {
+                $("#sid").hide();
+            });
+            $("div").bind("click", function () {
+                $("#image01").slideToggle();
+            });
+        });
+        var introduce = '\n爱你呦宝贝';
+        var sty1 = '点一下';
+        var trs1 = '\n你点';
+        var trs2 = '\n你个傻逼';
+        var str = introduce.concat(sty1).concat(trs1).concat(trs2);
+        var n = 0;
+        setInterval("getS()", 90);
+        function getS() {
+            var span1 = document.getElementById("sid");
+
+            n++;
+            if (n > 0 && n <= 929) {
+                span1.innerHTML = str.substring(0, n);
+
+            }
+
+        }
+
+    </script>
+    </script>
+</body>
+
+</html>
